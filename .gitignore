@@ -16,6 +16,9 @@ datasets/zips/
 # model folder
 models/
 
+# app folder
+ignored/
+
 # secret keys and passwords
 secrets/
 
