@@ -45,7 +45,7 @@ def on_startup():
 
 
 
-@app.post("/")
+@app.get("/")
 def read_index(q:Optional[str]=None):
     return {"hello": "world"}
 
