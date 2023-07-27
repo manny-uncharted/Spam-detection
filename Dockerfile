@@ -9,7 +9,7 @@ COPY ./entrypoint.sh /app/entrypoint.sh
 WORKDIR /app
 
 # RUN python3 -m pip install -r requirements.txt
-RUN python3 -m venv /opt/venv && /opt/venv/bin/python3 -m pip3 install -r requirements.txt
+RUN python3 -m venv /opt/venv && /opt/venv/bin/python -m pip install -r requirements.txt
 
 RUN chmod +x entrypoint.sh
 
