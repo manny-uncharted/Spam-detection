@@ -8,7 +8,7 @@ datasets/zips/
 *.so
 
 # bash scripts
-*.sh
+# *.sh
 
 #pickle files
 *.pkl
