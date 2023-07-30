@@ -28,7 +28,6 @@ def get_cluster():
 def get_session():
     cluster = get_cluster()
     session = cluster.connect()
-    # session.set_keyspace("spam_inferences")
     connection.register_connection(str(session), session=session)
     connection.set_default_connection(str(session))
     return session

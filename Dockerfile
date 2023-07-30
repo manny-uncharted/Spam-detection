@@ -1,4 +1,3 @@
-# FROM python:3.10.0-alpine
 FROM codingforentrepreneurs/python:3.9-webapp-cassandra
 
 COPY .env /app/.env
@@ -11,9 +10,11 @@ WORKDIR /app
 
 RUN chmod +x entrypoint.sh
 
-# RUN python3 -m pip install -r requirements.txt
+
 RUN python3 -m venv /opt/venv && /opt/venv/bin/python -m pip install -r requirements.txt
 
 RUN /opt/venv/bin/python -m pypyr /app/pipelines/ai-model-download
 
-CMD [ "entrypoint.sh" ]
+RUN /opt/venv/bin/python -m pypyr /app/pipelines/decrypt
+
+CMD [ "./entrypoint.sh" ]
