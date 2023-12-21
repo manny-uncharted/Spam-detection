@@ -15,7 +15,7 @@ datasets/
 *.pkl
 
 # model folder
-models/
+# models/
 
 # app folder
 ignored/
