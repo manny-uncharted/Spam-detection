@@ -19,6 +19,7 @@ datasets/
 
 # app folder
 ignored/
+decrypted/
 
 # secret keys and passwords
 secrets/
